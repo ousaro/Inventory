@@ -21,7 +21,7 @@ app.get('/health', (req, res) => res.status(200).send('OK'));
 app.post('/inventory/update', (req, res) => {
     const { itemId, quantity } = req.body;
 
-    console.log('Request received from Order service');
+    console.log('Request received from Order service to update inventory');
     
     if (!inventory[itemId]) {
         return res.status(404).json({ error: 'Item not found in inventory' });
